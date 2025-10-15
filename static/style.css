@@ -1,0 +1,116 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Body & Background */
+body {
+    background: linear-gradient(135deg, #0b0c2b 0%, #1c1f4a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container { max-width: 1000px; margin: 0 auto; }
+
+/* Header */
+.header { text-align: center; margin-bottom: 40px; }
+.header h1 {
+    font-size: 2.8em;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    margin-bottom: 10px;
+}
+.header p { color: #a0a0ff; font-size: 1.2em; }
+
+/* Card */
+.card {
+    background: #11132d;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px #00f0ff33;
+    margin-bottom: 30px;
+    transition: 0.3s all ease;
+}
+.card:hover { box-shadow: 0 0 40px #00f0ff66; }
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed #00f0ff;
+    border-radius: 15px;
+    padding: 50px 20px;
+    text-align: center;
+    background: #1a1c40;
+    transition: background 0.3s, transform 0.3s;
+}
+.upload-area:hover { background: #0f1030; transform: scale(1.02); cursor: pointer; }
+.upload-icon { font-size: 4em; color: #00f0ff; margin-bottom: 15px; }
+.upload-text { font-size: 1.3em; color: #ffffff; margin-bottom: 5px; }
+.upload-subtext { color: #a0a0ff; font-size: 0.95em; margin-bottom: 20px; }
+input[type="file"] { display: block; margin: 20px auto; padding: 10px; border-radius: 8px; border: 1px solid #00f0ff; background: #11132d; color: #00f0ff; }
+
+/* Button */
+.btn {
+    background: linear-gradient(135deg, #00f0ff 0%, #0055ff 100%);
+    color: #11132d;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px #00f0ff44;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 25px #00f0ff88; }
+
+/* Loading Spinner */
+.loading { display: none; text-align: center; padding: 20px; }
+.spinner {
+    border: 4px solid #222244;
+    border-top: 4px solid #00f0ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Error & Success Messages */
+.error-message { background: #330000; color: #ff4c4c; padding: 15px; border-radius: 10px; margin-top: 15px; display: none; }
+.success-message { background: #003300; color: #00ff99; padding: 15px; border-radius: 10px; margin-top: 15px; }
+
+/* Results */
+.results { display: none; }
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.summary-item {
+    background: #0f1030;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00f0ff33;
+    text-align: center;
+}
+.summary-label { font-size: 0.9em; color: #a0a0ff; margin-bottom: 5px; }
+.summary-value { font-size: 1.5em; font-weight: bold; color: #00f0ff; }
+
+/* Transactions Table */
+.transactions-table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #ffffff; }
+.transactions-table th {
+    background: #0f1030;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #00f0ff;
+    border-bottom: 1px solid #00f0ff33;
+}
+.transactions-table td { padding: 12px; border-bottom: 1px solid #00f0ff33; }
+.transactions-table tr:hover { background: #11132d; }
+.transaction-debit { color: #ff4c4c; }
+.transaction-credit { color: #00ff99; }
+
+.section-title { font-size: 1.5em; color: #00f0ff; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #00f0ff33; }
+.bank-badge { display: inline-block; background: #11132d; color: #00f0ff; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 10px; }

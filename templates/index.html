@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 Credit Card Statement Parser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💳 Credit Card Parser</h1>
+            <p>Upload your PDF statement to extract all details instantly</p>
+        </div>
+
+        <div class="card">
+            <form id="uploadForm" enctype="multipart/form-data" method="post">
+                <div class="upload-area">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text">Select PDF Statement</div>
+                    <div class="upload-subtext">Supports HDFC, ICICI, SBI, Axis, Kotak</div>
+                    <input type="file" name="pdf_file" id="fileInput" accept=".pdf" required>
+                </div>
+                <div style="text-align:center; margin-top:20px;">
+                    <button type="submit" class="btn">Parse Statement</button>
+                </div>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Parsing your statement...</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+
+        <div class="card results" id="results"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
